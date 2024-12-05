@@ -1,0 +1,27 @@
+ul li {
+    color: red;
+}
+.balo{
+    height: 500px;
+    border-Radius : 90px;
+}
+.balo{ 
+    overflow: hidden; 
+    transition-duration: 0.8s; 
+    transition-property: transform; } 
+.balo:hover {
+     transform: rotate(360deg);
+     }
+
+#box{
+    height: 100px;
+    width: 100px;
+    border-radius: 30;
+    background-color:rgb(40, 173, 69);
+}
+
+body{
+    color: black;
+    background-image: url(../src/assets/winx.webp);
+
+}

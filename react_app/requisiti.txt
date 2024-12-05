@@ -1,0 +1,5 @@
+#npm install node
+#npm rundev
+#npm create vite@latest app --template react   per creare da zero un progetto react 
+#camel case e fondamentale
+#componenti sono parti di codice riutilizzabile
