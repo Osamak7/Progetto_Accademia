@@ -9,18 +9,22 @@ function App() {
   return (
     <>
       <Card 
+      IsVisit={true}
       immagine = "https://images.unsplash.com/photo-1732468053948-bade8f3270cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0NHx8fGVufDB8fHx8fA%3D%3D"
       titolo="Paesaggio annebiato"
       testo = "bellllissimo"></Card>
       <Card
+      IsVisit={false}
       immagine = "https://images.unsplash.com/photo-1732450101559-fe986d910d32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0OHx8fGVufDB8fHx8fA%3D%3D"
       titolo="Paesaggio innevato"
       testo = "anche meglio"></Card>
       <Card
+      IsVisit={true}
       immagine = "https://images.unsplash.com/photo-1733036432312-be0c9295b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3OXx8fGVufDB8fHx8fA%3D%3D"
       titolo="Tokyo"
       testo = "Pensieroso"></Card>
       <Card
+      IsVisit={false}
       immagine = "https://images.unsplash.com/photo-1719937206158-cad5e6775044?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4MXx8fGVufDB8fHx8fA%3D%3D"
       titolo="Computer"
       testo = "bellissimo pc"></Card>
