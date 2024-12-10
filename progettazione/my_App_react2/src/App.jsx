@@ -3,31 +3,71 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Card from '../components/card'
+
+function alertClick(){
+  alert("Blocco scam");
+}
+
+function handleChange(e){
+  console.log(e.target.value,"Ciao scammer");//prende il valore che scrivo e e lo mostra nella console 
+}
+
+function handleSubmit(e){
+  e.preventDefault(); // blocca il ricaricamento della pagina 
+  console.log(e);
+}
+
+
 function App() {
   const [count, setCount] = useState(0)
-
+  const cities =[
+    {id:0,
+      IsVisit:true,
+      titolo:"Paesaggio annebiato",
+      immagine: "https://images.unsplash.com/photo-1732468053948-bade8f3270cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0NHx8fGVufDB8fHx8fA%3D%3D",
+      testo : "bellllissimo"
+    },
+    {id:1,
+      IsVisit:false,
+      immagine : "https://images.unsplash.com/photo-1732450101559-fe986d910d32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0OHx8fGVufDB8fHx8fA%3D%3D",
+      titolo:"Paesaggio innevato",
+      testo : "anche meglio"
+    },
+    {id:2,
+      IsVisit:true,
+      immagine : "https://images.unsplash.com/photo-1733036432312-be0c9295b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3OXx8fGVufDB8fHx8fA%3D%3D",
+      titolo:"Tokyo",
+      testo : "Pensieroso"
+    },
+    {id:3,
+      IsVisit:false,
+      immagine : "https://images.unsplash.com/photo-1719937206158-cad5e6775044?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4MXx8fGVufDB8fHx8fA%3D%3D",
+      titolo:"Computer",
+      testo : "bellissimo pc"
+    },]
   return (
     <>
-      <Card 
-      IsVisit={true}
-      immagine = "https://images.unsplash.com/photo-1732468053948-bade8f3270cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0NHx8fGVufDB8fHx8fA%3D%3D"
-      titolo="Paesaggio annebiato"
-      testo = "bellllissimo"></Card>
-      <Card
-      IsVisit={false}
-      immagine = "https://images.unsplash.com/photo-1732450101559-fe986d910d32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0OHx8fGVufDB8fHx8fA%3D%3D"
-      titolo="Paesaggio innevato"
-      testo = "anche meglio"></Card>
-      <Card
-      IsVisit={true}
-      immagine = "https://images.unsplash.com/photo-1733036432312-be0c9295b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3OXx8fGVufDB8fHx8fA%3D%3D"
-      titolo="Tokyo"
-      testo = "Pensieroso"></Card>
-      <Card
-      IsVisit={false}
-      immagine = "https://images.unsplash.com/photo-1719937206158-cad5e6775044?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4MXx8fGVufDB8fHx8fA%3D%3D"
-      titolo="Computer"
-      testo = "bellissimo pc"></Card>
+
+      {cities.map((city)=>(
+        <Card key={city.id}
+        titolo={city.titolo}
+        immagine={city.immagine}
+        IsVisit={city.IsVisit}
+        testo={city.testo}
+        >
+        </Card>
+      ))}
+      {cities.filter((city)=> city.IsVisit).map((city)=>(
+        <Card key={city.id}
+        titolo={city.titolo}
+        immagine={city.immagine}
+        IsVisit={city.IsVisit}
+        testo={city.testo}>
+        </Card>
+      ))}
+      
+
+
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -38,9 +78,19 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
+        
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <button onClick={alertClick}>
+          alert
+        </button>
+        <input type="text" onChange={handleChange} />
+        
+        <form onSubmit={handleSubmit}>
+          <button type='submit'>Cliccamiiiiii!!!!</button>
+        </form>
+        
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
