@@ -3,19 +3,22 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Card from '../components/card'
+import TodoList from '../components/TodoList'
+import UserProfile from '../components/UserProfile'
+import Parent from '../components/ChildtoParent/Parent'
 
-function alertClick(){
-  alert("Blocco scam");
-}
+// function alertClick(){
+//   alert("Blocco scam");
+// }
 
-function handleChange(e){
-  console.log(e.target.value,"Ciao scammer");//prende il valore che scrivo e e lo mostra nella console 
-}
+// function handleChange(e){
+//   console.log(e.target.value,"Ciao scammer");//prende il valore che scrivo e e lo mostra nella console 
+// }
 
-function handleSubmit(e){
-  e.preventDefault(); // blocca il ricaricamento della pagina 
-  console.log(e);
-}
+// function handleSubmit(e){
+//   e.preventDefault(); // blocca il ricaricamento della pagina 
+//   console.log(e);
+// }
 
 
 function App() {
@@ -32,22 +35,12 @@ function App() {
       immagine : "https://images.unsplash.com/photo-1732450101559-fe986d910d32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0OHx8fGVufDB8fHx8fA%3D%3D",
       titolo:"Paesaggio innevato",
       testo : "anche meglio"
-    },
-    {id:2,
-      IsVisit:true,
-      immagine : "https://images.unsplash.com/photo-1733036432312-be0c9295b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3OXx8fGVufDB8fHx8fA%3D%3D",
-      titolo:"Tokyo",
-      testo : "Pensieroso"
-    },
-    {id:3,
-      IsVisit:false,
-      immagine : "https://images.unsplash.com/photo-1719937206158-cad5e6775044?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4MXx8fGVufDB8fHx8fA%3D%3D",
-      titolo:"Computer",
-      testo : "bellissimo pc"
-    },]
+    }]
   return (
     <>
-
+    <Parent/>
+      <TodoList/>
+      <UserProfile/>
       {cities.map((city)=>(
         <Card key={city.id}
         titolo={city.titolo}
@@ -57,7 +50,7 @@ function App() {
         >
         </Card>
       ))}
-      {cities.filter((city)=> city.IsVisit).map((city)=>(
+      {/* {cities.filter((city)=> city.IsVisit).map((city)=>(
         <Card key={city.id}
         titolo={city.titolo}
         immagine={city.immagine}
@@ -65,7 +58,7 @@ function App() {
         testo={city.testo}>
         </Card>
       ))}
-      
+       */}
 
 
       <div>
@@ -82,14 +75,14 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <button onClick={alertClick}>
+        {/* <button onClick={alertClick}>
           alert
         </button>
         <input type="text" onChange={handleChange} />
         
         <form onSubmit={handleSubmit}>
           <button type='submit'>Cliccamiiiiii!!!!</button>
-        </form>
+        </form> */}
         
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
