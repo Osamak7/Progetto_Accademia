@@ -7,6 +7,11 @@ import TodoList from '../components/TodoList'
 import UserProfile from '../components/UserProfile'
 import Parent from '../components/ChildtoParent/Parent'
 
+import {BrowserRouter ,Route, Routes ,Link} from 'react-router-dom';
+import Contact from '../components/Contact'
+import About from '../components/About'
+import Home from '../components/Home'
+
 // function alertClick(){
 //   alert("Blocco scam");
 // }
@@ -37,7 +42,35 @@ function App() {
       testo : "anche meglio"
     }]
   return (
-    <>
+  <>
+    
+  <BrowserRouter>
+    <div>
+        <nav>
+          <ul>
+
+            <li>
+              <Link to="/">Home </Link>
+            </li>
+            <li>
+              <Link to="/About"> About</Link>
+            </li>
+            <li>
+              <Link to="/Contact">Contact </Link>
+            </li>
+          </ul>
+        </nav>
+
+          
+      <Routes>
+        <Route path ="/" element={<Home />} />
+        <Route path ="/About" element={<About />} />
+        <Route path ="/Contact" element={<Contact />} />
+      </Routes>
+    </div>
+  </BrowserRouter>
+
+
     <Parent/>
       <TodoList/>
       <UserProfile/>
@@ -91,7 +124,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+  </>
   )
 }
 

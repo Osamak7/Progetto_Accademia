@@ -21,10 +21,10 @@ function UserProfile() {
                 <input type="text" value={name} onChange={handleNameChange}/>
             </label>
             <br />
-            <lable>
+            <label>
                 Email:
                 <input type="email" value={email} onChange={handleEmailChange}/> 
-            </lable>
+            </label>
             <h3>Dati inseriti:</h3>
             <p>Nome: {name}</p>
             <p>Email: {email}</p>

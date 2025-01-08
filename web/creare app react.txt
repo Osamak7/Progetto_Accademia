@@ -13,3 +13,4 @@ ripassare i childrean
 ripassare chiamate rest
 
  
+installare l'ultima versione di route (singolo progetto) = npm install react-router-dom@latest
