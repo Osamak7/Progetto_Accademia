@@ -1,8 +1,0 @@
- npm create vite@latest <nome> --template react
- cd nome
- npm install
- nvm install node switch alla versione 
- per runnare = npm run dev
-
-ripassare UserEffect
- ripassare i childrean 
