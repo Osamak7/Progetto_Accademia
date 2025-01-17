@@ -1,6 +1,6 @@
  npm create vite@latest <nome> --template react
  cd nome
- npm install
+ npm install # anche se il progetto da problemi a runnarsi con vite 
  nvm install node switch alla versione 
  per runnare = npm run dev
 per vedere le porte che utilizza il nostro pc = less /etc/services

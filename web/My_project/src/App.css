@@ -1,0 +1,66 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/***************************************** Stile NavBar **********************************/
+.navbar {
+  position: fixed; /* Posiziona la navbar rispetto alla finestra */
+  top: 0;          /* Fissa la navbar in alto */
+  right: 0;        /* Allinea la navbar a destra */
+  display: flex;   /* Per gestire gli elementi al suo interno */
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  background-color: silver; /* Colore di sfondo */
+  width: 100%;            /* Assicura che la navbar copra l'intera larghezza */
+}
+
+.navbar a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar a:hover {
+  /* text-decoration: underline;
+  text-decoration-color: black; */
+  color: black;
+}
